@@ -2,7 +2,6 @@ package com.bring.transaction.helper;
 
 import java.math.BigDecimal;
 
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -20,7 +19,6 @@ public class MonetaryAmount {
 
     private final BigDecimal amount;
 
-    @Builder
     public MonetaryAmount(final String currency, final BigDecimal amount) {
         this.currency = currency;
         this.amount = nonNull(amount) ? amount: BigDecimal.ZERO;

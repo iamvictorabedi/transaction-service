@@ -5,7 +5,7 @@ import com.bring.transaction.dto.TransactionDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface TransactionMapper {
     @Mapping(source = "this_account.id", target = "accountId")
     @Mapping(source = "other_account.number", target = "counterpartyAccount")

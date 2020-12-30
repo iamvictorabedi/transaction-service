@@ -1,8 +1,9 @@
 package com.bring.transaction.client.openapi;
 
-import lombok.Getter;
+import lombok.Builder;
 
-@Getter
+@Builder
+@lombok.Value
 public class Details {
     private String type;
     private String description;

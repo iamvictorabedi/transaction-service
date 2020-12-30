@@ -1,11 +1,10 @@
 package com.bring.transaction.client.openapi;
 
-import java.util.Currency;
+import lombok.Builder;
 
-import lombok.Getter;
-
-@Getter
+@Builder
+@lombok.Value
 public class Value {
-    private Currency currency;
+    private String currency;
     private String amount;
 }

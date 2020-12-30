@@ -46,12 +46,13 @@ public class TransactionServiceImpl implements TransactionService {
                 .map(this.mapper::toTransactionDto)
                 .collect(toList());
 
-        final String currency = transactionDto.stream()
+        final String currency = "GBS" ;
+        transactionDto.stream()
                 .findFirst()
                 .orElseThrow(IllegalArgumentException::new)
                 .getInstructedCurrency();
 
-        final  BigDecimal amount = transactionDto.stream().map(transactionDto1 -> new BigDecimal(transactionDto1.getInstructedAmount()))
+        final  BigDecimal amount = transactionDto.stream().map(transaction -> new BigDecimal(transaction.getInstructedAmount()))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
 

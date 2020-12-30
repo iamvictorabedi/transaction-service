@@ -1,8 +1,10 @@
 package com.bring.transaction.client.openapi;
 
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Value;
 
-@Getter
+@Value
+@Builder
 public class Account {
     private String id;
     private String number;
