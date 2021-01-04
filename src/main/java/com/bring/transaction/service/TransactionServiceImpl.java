@@ -46,8 +46,7 @@ public class TransactionServiceImpl implements TransactionService {
                 .map(this.mapper::toTransactionDto)
                 .collect(toList());
 
-        final String currency = "GBS" ;
-        transactionDto.stream()
+        final String currency =  transactionDto.stream()
                 .findFirst()
                 .orElseThrow(IllegalArgumentException::new)
                 .getInstructedCurrency();
